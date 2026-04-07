@@ -158,7 +158,7 @@ MyString MyString::trim() const {
     // Hint: Use find_first_not_of and find_last_not_of
     size_t start = data.find_first_not_of(" \t\n\r");
     if (start == string ::npos) return MyString("");
-    size_t end = data.find_first_not_of(" \t\n\r");
+    size_t end = data.find_last_not_of(" \t\n\r");
     return MyString(data.substr(start, end-start+1));
     
 }
